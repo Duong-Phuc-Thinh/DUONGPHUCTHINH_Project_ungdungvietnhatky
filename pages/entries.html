@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý bài viết</title>
+  <link rel="stylesheet" href="../css/entries.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <button class="add-post">Thêm mới bài viết</button>
+      <h2>Quản lý bài viết</h2>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Ảnh</th>
+          <th>Tiêu đề</th>
+          <th>Chủ đề</th>
+          <th>Nội dung</th>
+          <th>Trạng thái</th>
+          <th>Chỉnh sửa trạng thái</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="../images/images.jpg" alt="ảnh bài viết"></td>
+          <td>Học nấu cá sốt cà chua</td>
+          <td>Nấu ăn</td>
+          <td>tôi đã học được cách nấu ăn...</td>
+          <td><span class="badge public">Public</span></td>
+          <td>
+            <select>
+              <option>Public</option>
+              <option>Private</option>
+            </select>
+          </td>
+          <td class="actions">
+            <button class="edit">Sửa</button>
+            <button class="delete">Xóa</button>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="../images/tải xuống.jpg" alt="ảnh bài viết"></td>
+          <td>Bí kíp viết CV ngành IT</td>
+          <td>IT</td>
+          <td>Chia sẻ cách viết CV ấn tượng...</td>
+          <td><span class="badge private">Private</span></td>
+          <td>
+            <select>
+              <option>Public</option>
+              <option selected>Private</option>
+            </select>
+          </td>
+          <td class="actions">
+            <button class="edit">Sửa</button>
+            <button class="delete">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button>&larr; Previous</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <span>...</span>
+      <button>9</button>
+      <button>10</button>
+      <button>Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

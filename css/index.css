@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: #e3e3e3;
+  }
+  
+  .main-header {
+    background: white;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #222;
+    font-size: 18px;
+  }
+  
+  .logo img {
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+  .search-box {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .search-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  .profile-dropdown {
+    position: relative;
+  }
+  
+  .profile-dropdown .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 220px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 10;
+  }
+  
+  .profile-dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-info img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-info p {
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .dropdown-menu a {
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 1s;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #007bff;
+  }
+  
