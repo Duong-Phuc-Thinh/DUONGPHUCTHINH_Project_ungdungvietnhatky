@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Categories</title>
+    <link rel="stylesheet" href="../css/entries_manager2.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Logo" />
+        <span>THINHDADEN BLOG</span>
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <i class="fas fa-envelope"></i>
+          <span class="badge">2</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
+      <div class="profile-dropdown">
+        <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" class="avatar" alt="Avatar"/>
+        <div class="dropdown-menu">
+          <div class="profile-info">
+            <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
+            <div>
+              <strong>Felix Finn</strong>
+              <p>thinhdaden@gmail.com</p>
+            </div>
+          </div>
+          <a href="#">View profile</a>
+          <a href="#">Update profile picture</a>
+          <a href="#">Change password</a>
+          <a href="#">Log out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar and Content -->
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">
+        <h2>Logo</h2>
+      </div>
+      <ul>
+        <li><a href="#">Manage Users</a></li>
+        <li><a href="#">Manage Entries</a></li>
+        <li><a href="#">Manage Articles</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <h2>Manage Categories</h2>
+      </div>
+
+      <div class="category-container">
+        <div class="add-category">
+          <input type="text" placeholder="Enter category name" id="category-name" class="input-field">
+          <button id="add-category-btn">Add Category</button>
+        </div>
+
+        <div class="category-list">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Category Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="category-table">
+              <!-- Category rows will be inserted dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/entries_manager.js"></script>
+</body>
+</html>
