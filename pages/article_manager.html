@@ -8,34 +8,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-container">
-          <div class="logo"> 
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Logo" />
-            <span>THINHDADEN BLOG</span>
-          </div>
-          <div class="search-box">
-            <input type="text" placeholder="Search for articles" />
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="profile-dropdown">
-            <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" class="avatar" alt="Avatar"/>
-            <div class="dropdown-menu">
-              <div class="profile-info">
-                <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
-                <div>
-                  <strong>Felix Finn</strong>
-                  <p>thinhdaden@gmail.com</p>
-                </div>
-              </div>
-              <a href="#">View profile</a>
-              <a href="#">Update profile picture</a>
-              <a href="#">Change password</a>
-              <a href="#">Log out</a>
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Logo" />
+        <span>THINHDADEN BLOG</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search for articles" />
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="profile-dropdown">
+        <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" class="avatar" alt="Avatar"/>
+        <div class="dropdown-menu">
+          <div class="profile-info">
+            <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
+            <div>
+              <strong>Felix Finn</strong>
+              <p>thinhdaden@gmail.com</p>
             </div>
           </div>
+          <a href="#">View profile</a>
+          <a href="#">Update profile picture</a>
+          <a href="#">Change password</a>
+          <a href="#">Log out</a>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
   <div class="wrapper">
     <h2><i class="fas fa-newspaper"></i> Add New Article</h2>
     
@@ -44,7 +44,13 @@
       <input type="text" placeholder="Enter title">
 
       <label>Article Categories:</label>
-      <input type="text" placeholder="e.g. Tech, Travel, Food...">
+      <select id="category-select">
+        <option value="Tech">Tech</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+        <option value="Lifestyle">Lifestyle</option>
+        <option value="Health">Health</option>
+      </select>
 
       <label>Mood:</label>
       <input type="text" value="😊 Happy" readonly>
@@ -62,10 +68,11 @@
       <div class="upload-box">
         <input type="file" id="file-upload" hidden>
         <label for="file-upload"><i class="fas fa-cloud-upload-alt"></i> Browse and choose the files you want</label>
-      </div>
+      </div>  
 
       <button type="submit" class="submit-btn">Add</button>
     </form>
   </div>
+  <script src="/js/article_manager.js"></script>
 </body>
 </html>

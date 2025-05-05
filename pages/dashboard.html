@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>My Blog</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">MY BLOG</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for articles">
+            </div>
+            <div class="user-profile">
+                <span>Sign Up</span> | <span>Log In</span>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="filter-bar">
+          <input type="text" id="search-input" placeholder="Search articles by title...">
+          <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="Tech">Tech</option>
+            <option value="Travel">Travel</option>
+            <option value="Food">Food</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Health">Health</option>
+          </select>
+        </div>
+    <main>
+        <section class="recent-posts">
+            <h2>Recent blog posts</h2>
+            <div class="posts">
+                <!-- Post 1 -->
+                <article class="post">
+                    <img src="../images/work.jpg" alt="Post image">
+                    <div class="content">
+                        <h3>A Productive Day at Work</h3>
+                        <p class="date">2025-03-28</p>
+                        <p class="description">Today was really productive at work...</p>
+                        <button class="read-more">Read more</button>
+                    </div>
+                </article>
+                <!-- Post 2 -->
+                <article class="post">
+                    <img src="../images/fist work.avif" alt="Post image">
+                    <div class="content">
+                        <h3>My First Job Interview Experience</h3>
+                        <p class="date">2025-03-24</p>
+                        <p class="description">It was an amazing interview. I felt confident...</p>
+                        <button class="read-more">Read more</button>
+                    </div>
+                </article>
+                <!-- Post 3 -->
+                <article class="post">
+                    <img src="../images/overthinking.jpg" alt="Post image">
+                    <div class="content">
+                        <h3>Overthinking Everything</h3>
+                        <p class="date">2025-03-22</p>
+                        <p class="description">Sometimes we overthink everything, from personal life to work...</p>
+                        <button class="read-more">Read more</button>
+                    </div>
+                </article>
+                <!-- Post 4 -->
+                <article class="post">
+                    <img src="../images/view.webp" alt="Post image">
+                    <div class="content">
+                        <h3>My First Remote Work Experience</h3>
+                        <p class="date">2025-03-20</p>
+                        <p class="description">Working remotely for the first time was an eye-opening experience...</p>
+                        <button class="read-more">Read more</button>
+                    </div>
+                </article>
+                <!-- Post 5 -->
+                <article class="post">
+                    <img src="../images/motion.webp" alt="Post image">
+                    <div class="content">
+                        <h3>How to Stay Motivated Every Day</h3>
+                        <p class="date">2025-03-18</p>
+                        <p class="description">Staying motivated is key to achieving your goals...</p>
+                        <button class="read-more">Read more</button>
+                    </div>
+                </article>
+                <!-- Post 6 -->
+                <article class="post">
+                    <img src="../images/collaboration.jpg" alt="Post image">
+                    <div class="content">
+                        <h3>How Collaboration Makes Us Better Designers</h3>
+                        <p class="date">2025-03-16</p>
+                        <p class="description">Collaboration is key for better and stronger designs...</p>
+                        <button class="read-more">Read more</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="add-new-article">
+            <button>Add New Article</button>
+        </section>
+
+        <section class="pagination">
+            <button>Previous</button>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <button>Next</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="about">
+                <h4>About</h4>
+                <p>My Blog is a platform for sharing personal experiences and professional insights...</p>
+            </div>
+            <div class="social">
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/dashboard.js"></script>
+</body>
+
+</html>
