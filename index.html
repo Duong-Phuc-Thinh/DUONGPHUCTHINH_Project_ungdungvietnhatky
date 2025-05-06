@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Header with Dropdown</title>
+  <title>THINHDADEN BLOG</title>
   <link rel="stylesheet" href="./css/index.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -15,7 +15,7 @@
         <span>THINHDADEN BLOG</span>
       </div>
       <div class="search-box">
-        <input type="text" placeholder="Search for articles" />
+        <input type="text" id="search-input" placeholder="Search for articles" />
         <i class="fas fa-search"></i>
       </div>
       <div class="profile-dropdown">
@@ -24,17 +24,67 @@
           <div class="profile-info">
             <img src="./images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
             <div>
-              <strong>Felix Finn</strong>
-              <p>thinhdaden@gmail.com</p>
+              <strong id="user-name">Felix Finn</strong>
+              <p id="user-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1b5a9a8afa9a5a0a5a4af81a6aca0a8adefa2aeac">[email&#160;protected]</a></p>
             </div>
           </div>
+          <a href="#" onclick="logout()">Log out</a>
           <a href="#">View profile</a>
           <a href="#">Update profile picture</a>
           <a href="#">Change password</a>
-          <a href="#">Log out</a>
         </div>
       </div>
     </div>
   </header>
-</body>
+
+  <main>
+    <section class="recent-posts">
+        <h2>Recent blog posts</h2>
+        <div class="search-bar">
+          <select id="category-filter">
+              <option value="">All Categories</option>
+              <option value="Tech">Tech</option>
+              <option value="Travel">Travel</option>
+              <option value="Food">Food</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Health">Health</option>
+          </select>
+        </div>
+        <div class="posts" id="posts-container">
+          <!-- Posts will be dynamically populated here -->
+        </div>
+    </section>
+
+    <section class="add-new-article">
+        <button>Add New Article</button>
+    </section>
+
+    <section class="pagination">
+        <button>Previous</button>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <button>Next</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        <div class="about">
+            <h4>About</h4>
+            <p>My Blog is a platform for sharing personal experiences and professional insights...</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/">Facebook</a> | 
+            <a href="https://x.com/?logout=1746501939942">Twitter</a> | 
+            <a href="https://www.instagram.com/">Instagram</a>
+        </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/js/index.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b98b387a27f995',t:'MTc0NjU0NTY4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b9b30d2ec3c000',t:'MTc0NjU0NzMxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b9fa050cd4848d',t:'MTc0NjU1MDIyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

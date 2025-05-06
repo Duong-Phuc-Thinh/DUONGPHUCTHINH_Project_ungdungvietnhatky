@@ -81,12 +81,27 @@ body {
     width: 250px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right: 10px;
+}
+
+.add-post {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.add-post:hover {
+    background-color: #2980b9;
 }
 
 .sort-options {
     display: flex;
     align-items: center;
-    margin-left: 20px;
 }
 
 .sort-options span {
@@ -120,6 +135,10 @@ th {
     color: white;
 }
 
+td {
+    vertical-align: middle;
+}
+
 td button {
     padding: 5px 10px;
     margin: 0 5px;
@@ -143,6 +162,27 @@ td button {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+    vertical-align: middle;
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.badge.active {
+    background-color: #27ae60;
+}
+
+.badge.inactive {
+    background-color: #e74c3c;
 }
 
 .pagination {
@@ -163,6 +203,12 @@ td button {
     background-color: #3498db;
     color: white;
 }
+
+.pagination .active {
+    background-color: #3498db;
+    color: white;
+}
+
 .icons {
     display: flex;
     align-items: center;

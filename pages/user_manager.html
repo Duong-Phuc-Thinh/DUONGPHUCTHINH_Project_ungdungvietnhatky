@@ -32,7 +32,7 @@
             <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
             <div>
               <strong>Felix Finn</strong>
-              <p>thinhdaden@gmail.com</p>
+              <p>felix.finn@example.com</p>
             </div>
           </div>
           <a href="#">View profile</a>
@@ -51,9 +51,9 @@
         <h2>Logo</h2>
       </div>
       <ul>
-        <li><a href="#">Manage Users</a></li>
-        <li><a href="#">Manage Entries</a></li>
-        <li><a href="#">Manage Articles</a></li>
+        <li><a href="user_manager.html">Manage Users</a></li>
+        <li><a href="entries_manager.html">Manage Categories</a></li>
+        <li><a href="entries.html">Manage Articles</a></li>
         <li><a href="#">Log out</a></li>
       </ul>
     </div>
@@ -63,6 +63,7 @@
         <h2>Manage Users</h2>
         <div class="sort-and-search">
           <input type="text" placeholder="Search user" class="search-input">
+          <button class="add-post">Add User</button>
           <div class="sort-options">
             <span>Sort by name</span>
             <i class="fas fa-sort"></i>
@@ -82,48 +83,16 @@
             </tr>
           </thead>
           <tbody id="user-table">
-            <tr>
-                <td>
-                  <img src="../images/nam.jpg" alt="Avatar" class="avatar-small"> Nam
-                </td>
-                <td>Active</td>
-                <td>NamVen@gmail.com</td>
-                <td>Active</td>
-                <td><button class="block-btn">Block</button> <button class="unblock-btn">Unblock</button></td>
-              </tr>
-            <tr>
-              <td>
-                <img src="../images/hoa.jpg" alt="Avatar" class="avatar-small"> Bá Hòa
-              </td>
-              <td>Active</td>
-              <td>Bahoa@gmail.com</td>
-              <td>Active</td>
-              <td><button class="block-btn">Block</button> <button class="unblock-btn">Unblock</button></td>
-            </tr>
-            <tr>
-              <td>
-                <img src="../images/dao.jpg" alt="Avatar" class="avatar-small"> Anh Đào
-              </td>
-              <td>Active</td>
-              <td>AnhDaox@gamil.com</td>
-              <td>Active</td>
-              <td><button class="block-btn">Block</button> <button class="unblock-btn">Unblock</button></td>
-            </tr>
-            <!-- More rows can go here -->
+            <!-- User rows will be inserted dynamically -->
           </tbody>
         </table>
       </div>
 
       <div class="pagination">
-        <button>Previous</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>Next</button>
+        <!-- Pagination will be inserted dynamically -->
       </div>
     </div>
   </div>
-
-  <script src="manage_users.js"></script>
+  <script src="../js/user_manager.js"></script>
 </body>
 </html>

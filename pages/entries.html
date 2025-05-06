@@ -1,78 +1,119 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
-  <title>Quản lý bài viết</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Articles</title>
   <link rel="stylesheet" href="../css/entries.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Logo" />
+        <span>THINHDADEN BLOG</span>
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <i class="fas fa-envelope"></i>
+          <span class="badge">2</span>
+        </div>
+        <div class="icon">
+          <i class="fas fa-bell"></i>
+        </div>
+      </div>
+      <div class="profile-dropdown">
+        <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" class="avatar" alt="Avatar" />
+        <div class="dropdown-menu">
+          <div class="profile-info">
+            <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar" />
+            <div>
+              <strong>Felix Finn</strong>
+              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                  data-cfemail="c1b5a9a8afa9a5a0a5a4af81a6aca0a8adefa2aeac">[email&#160;protected]</a></p>
+            </div>
+          </div>
+          <a href="#">View profile</a>
+          <a href="#">Update profile picture</a>
+          <a href="#">Change password</a>
+          <a href="#">Log out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar and Content -->
   <div class="container">
-    <div class="header">
-      <button class="add-post">Thêm mới bài viết</button>
-      <h2>Quản lý bài viết</h2>
+    <div class="sidebar">
+      <div class="logo">
+        <h2>Logo</h2>
+      </div>
+      <ul>
+        <li><a href="user_manager.html">Manage Users</a></li>
+        <li><a href="entries_manager.html">Manage Categories</a></li>
+        <li><a href="entries.html">Manage Articles</a></li>
+        <li><a href="#">Log out</a></li>
+      </ul>
     </div>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Ảnh</th>
-          <th>Tiêu đề</th>
-          <th>Chủ đề</th>
-          <th>Nội dung</th>
-          <th>Trạng thái</th>
-          <th>Chỉnh sửa trạng thái</th>
-          <th>Hành động</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><img src="../images/images.jpg" alt="ảnh bài viết"></td>
-          <td>Học nấu cá sốt cà chua</td>
-          <td>Nấu ăn</td>
-          <td>tôi đã học được cách nấu ăn...</td>
-          <td><span class="badge public">Public</span></td>
-          <td>
-            <select>
-              <option>Public</option>
-              <option>Private</option>
-            </select>
-          </td>
-          <td class="actions">
-            <button class="edit">Sửa</button>
-            <button class="delete">Xóa</button>
-          </td>
-        </tr>
-        <tr>
-          <td><img src="../images/tải xuống.jpg" alt="ảnh bài viết"></td>
-          <td>Bí kíp viết CV ngành IT</td>
-          <td>IT</td>
-          <td>Chia sẻ cách viết CV ấn tượng...</td>
-          <td><span class="badge private">Private</span></td>
-          <td>
-            <select>
-              <option>Public</option>
-              <option selected>Private</option>
-            </select>
-          </td>
-          <td class="actions">
-            <button class="edit">Sửa</button>
-            <button class="delete">Xóa</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="content">
+      <div class="header">
+        <h2>Manage Articles</h2>
+        <div class="sort-and-search">
+          <button class="add-post">Thêm mới bài viết</button>
+          <input type="text" placeholder="Search articles" class="search-input">
+          <div class="sort-options">
+            <span>Sort by title</span>
+            <i class="fas fa-sort"></i>
+          </div>
+        </div>
+      </div>
 
-    <div class="pagination">
-      <button>&larr; Previous</button>
-      <button class="active">1</button>
-      <button>2</button>
-      <button>3</button>
-      <span>...</span>
-      <button>9</button>
-      <button>10</button>
-      <button>Next &rarr;</button>
+      <div class="article-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Ảnh</th>
+              <th>Tiêu đề</th>
+              <th>Chủ đề</th>
+              <th>Nội dung</th>
+              <th>Trạng thái</th>
+              <th>Chỉnh sửa trạng thái</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be populated dynamically by entries.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination">
+        <!-- Pagination buttons will be populated dynamically by entries.js -->
+      </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.sidebar ul li a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const href = link.getAttribute('href');
+          if (href === '#') {
+            window.location.href = 'dashboard.html';
+          } else {
+            window.location.href = href;
+          }
+        });
+      });
+    });
+  </script>
   <script src="../js/entries.js"></script>
-</body>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'93b89cc9de7dadc5',t:'MTc0NjUzNTkyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b9fa6fb887848d',t:'MTc0NjU1MDI0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
 </html>

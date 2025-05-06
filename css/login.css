@@ -275,3 +275,20 @@ body{
 .login-register p a:hover{
     text-decoration: underline;
 }
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 14px;
+}
+.notification.success {
+    background-color: #4caf50;
+    color: white;
+}
+.notification.error {
+    background-color: #f44336;
+    color: white;
+}

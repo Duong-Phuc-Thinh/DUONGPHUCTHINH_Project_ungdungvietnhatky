@@ -32,7 +32,7 @@
             <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
             <div>
               <strong>Felix Finn</strong>
-              <p>thinhdaden@gmail.com</p>
+              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1b5a9a8afa9a5a0a5a4af81a6aca0a8adefa2aeac">[email&#160;protected]</a></p>
             </div>
           </div>
           <a href="#">View profile</a>
@@ -51,9 +51,9 @@
         <h2>Logo</h2>
       </div>
       <ul>
-        <li><a href="#">Manage Users</a></li>
-        <li><a href="#">Manage Entries</a></li>
-        <li><a href="#">Manage Articles</a></li>
+        <li><a href="user_manager.html">Manage Users</a></li>
+        <li><a href="entries_manager.html">Manage Categories</a></li>
+        <li><a href="entries.html">Manage Articles</a></li>
         <li><a href="#">Log out</a></li>
       </ul>
     </div>
@@ -75,6 +75,8 @@
               <tr>
                 <th>#</th>
                 <th>Category Name</th>
+                <th>Status</th>
+                <th>Change Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -84,9 +86,30 @@
           </table>
         </div>
       </div>
+
+      <div class="pagination">
+        <!-- Pagination buttons will be populated dynamically -->
+      </div>
     </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.sidebar ul li a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const href = link.getAttribute('href');
+          if (href === '#') {
+            window.location.href = 'dashboard.html';
+          } else {
+            window.location.href = href;
+          }
+        });
+      });
+    });
+  </script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="../js/entries_manager.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93b89cc9a9b544f6',t:'MTc0NjUzNTkyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
