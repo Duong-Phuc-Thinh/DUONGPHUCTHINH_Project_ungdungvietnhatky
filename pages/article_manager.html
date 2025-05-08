@@ -25,7 +25,7 @@
             <img src="../images/z6408394237144_1f247e0d9e2f483efeabc3ce14dda410.jpg" alt="Avatar"/>
             <div>
               <strong>Felix Finn</strong>
-              <p>thinhdaden@gmail.com</p>
+              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c1b5a9a8afa9a5a0a5a4af81a6aca0a8adefa2aeac">[email&#160;protected]</a></p>
             </div>
           </div>
           <a href="#">View profile</a>
@@ -41,10 +41,10 @@
     
     <form class="post-form">
       <label>Title:</label>
-      <input type="text" placeholder="Enter title">
+      <input type="text" placeholder="Enter title" required>
 
       <label>Article Categories:</label>
-      <select id="category-select">
+      <select id="category-select" required>
         <option value="Tech">Tech</option>
         <option value="Travel">Travel</option>
         <option value="Food">Food</option>
@@ -56,12 +56,12 @@
       <input type="text" value="😊 Happy" readonly>
 
       <label>Content:</label>
-      <textarea rows="6" placeholder="Write your content here..."></textarea>
+      <textarea rows="6" placeholder="Write your content here..." required></textarea>
 
       <label>Status:</label>
       <div class="status-options">
-        <label><input type="radio" name="status" checked> public</label>
-        <label><input type="radio" name="status"> private</label>
+        <label><input type="radio" name="status" value="public" checked> public</label>
+        <label><input type="radio" name="status" value="private"> private</label>
       </div>
 
       <label>Upload Image:</label>
@@ -73,6 +73,7 @@
       <button type="submit" class="submit-btn">Add</button>
     </form>
   </div>
-  <script src="/js/article_manager.js"></script>
-</body>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="../js/article_manager.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93ca93d0ccf053d3',t:'MTc0NjcyNDI5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
